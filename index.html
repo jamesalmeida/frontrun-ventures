@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontrun Ventures</title>
+    <meta name="description" content="We were here first.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            min-height: 100vh;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Animated gradient background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at 30% 50%, rgba(0, 255, 136, 0.03) 0%, transparent 50%),
+                        radial-gradient(ellipse at 70% 50%, rgba(0, 200, 255, 0.03) 0%, transparent 50%);
+            animation: drift 20s ease-in-out infinite;
+            z-index: 0;
+        }
+
+        @keyframes drift {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(2%, -1%) rotate(1deg); }
+            66% { transform: translate(-1%, 2%) rotate(-1deg); }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 2rem;
+            max-width: 600px;
+        }
+
+        .logo {
+            font-family: 'Space Mono', monospace;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #00ff88, #00c8ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tagline {
+            font-family: 'Space Mono', monospace;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 3rem;
+            letter-spacing: 0.1em;
+        }
+
+        .manifesto {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #888;
+            margin-bottom: 3rem;
+            text-align: left;
+        }
+
+        .manifesto p {
+            margin-bottom: 1rem;
+        }
+
+        .manifesto strong {
+            color: #00ff88;
+        }
+
+        .ticker {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.85rem;
+            color: #333;
+            margin-bottom: 3rem;
+            overflow: hidden;
+            white-space: nowrap;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+            padding: 0.75rem 0;
+        }
+
+        .ticker-inner {
+            display: inline-block;
+            animation: scroll 30s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .for-sale {
+            display: inline-block;
+            border: 1px solid #333;
+            padding: 0.75rem 1.5rem;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.85rem;
+            color: #666;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .for-sale:hover {
+            border-color: #00ff88;
+            color: #00ff88;
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.1);
+        }
+
+        .for-sale span {
+            color: #444;
+            font-size: 0.75rem;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 1.5rem;
+            font-size: 0.7rem;
+            color: #2a2a2a;
+            font-family: 'Space Mono', monospace;
+            z-index: 1;
+        }
+
+        /* Blinking cursor */
+        .cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1em;
+            background: #00ff88;
+            margin-left: 4px;
+            animation: blink 1s step-end infinite;
+            vertical-align: text-bottom;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">frontrun<span style="-webkit-text-fill-color: #00c8ff;">.ventures</span></div>
+        <div class="tagline">WE WERE HERE FIRST<span class="cursor"></span></div>
+
+        <div class="ticker">
+            <div class="ticker-inner">
+                &nbsp;&nbsp;📈 BUYING THE RUMOR &nbsp;&nbsp;│&nbsp;&nbsp; 🏃 FIRST MOVER ADVANTAGE &nbsp;&nbsp;│&nbsp;&nbsp; 🔮 SAW IT COMING &nbsp;&nbsp;│&nbsp;&nbsp; 💎 DIAMOND HANDS SINCE BEFORE IT WAS COOL &nbsp;&nbsp;│&nbsp;&nbsp; 🚀 ALREADY IN &nbsp;&nbsp;│&nbsp;&nbsp; ⚡ FASTER THAN YOUR MEV BOT &nbsp;&nbsp;│&nbsp;&nbsp; 🧠 WE READ THE WHITEPAPER &nbsp;&nbsp;│&nbsp;&nbsp; 📈 BUYING THE RUMOR &nbsp;&nbsp;│&nbsp;&nbsp; 🏃 FIRST MOVER ADVANTAGE &nbsp;&nbsp;│&nbsp;&nbsp; 🔮 SAW IT COMING &nbsp;&nbsp;│&nbsp;&nbsp; 💎 DIAMOND HANDS SINCE BEFORE IT WAS COOL &nbsp;&nbsp;│&nbsp;&nbsp; 🚀 ALREADY IN &nbsp;&nbsp;│&nbsp;&nbsp; ⚡ FASTER THAN YOUR MEV BOT &nbsp;&nbsp;│&nbsp;&nbsp; 🧠 WE READ THE WHITEPAPER &nbsp;&nbsp;│&nbsp;&nbsp;
+            </div>
+        </div>
+
+        <div class="manifesto">
+            <p>While you were still reading the thread, we already bought the domain.</p>
+            <p>While you were debating the thesis, we were already <strong>in position</strong>.</p>
+            <p>Some call it frontrunning. We call it <strong>due diligence at speed</strong>.</p>
+        </div>
+
+        <a href="https://x.com/James_Almeida" target="_blank" class="for-sale">
+            THIS DOMAIN IS FOR SALE<br>
+            <span>DM @James_Almeida on X</span>
+        </a>
+    </div>
+
+    <div class="footer">© 2026 frontrun.ventures — acquired before you thought of it</div>
+</body>
+</html>
